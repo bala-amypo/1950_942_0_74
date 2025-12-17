@@ -6,7 +6,7 @@ import jarkata.persistence.Id;
 
 @Entity
 public class Stuentity{
-    @Id //unique value
+    @Id     //unique value
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
