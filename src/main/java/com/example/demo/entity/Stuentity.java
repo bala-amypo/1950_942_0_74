@@ -1,12 +1,16 @@
 package com.example.demo.entity;
 
-import jakata.persistence.Entity;
-import jakata.persistence.GeneratedValue;
-import jakata.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+
+
 
 @Entity
 public class Stuentity{
-    @Id     //unique value
+    @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
     private Long id;
     private String name;
@@ -28,23 +32,23 @@ public class Stuentity{
      public String getEmail(){
         return email;
     }
-    public void setEmail(Long ){
+    public void setEmail(String email ){
         this.email=email;
     }
      public float getcgpa(){
         return cgpa;
     }
-    public void setcgpa(float cgpa id){
+    public void setcgpa(float cgpa){
         this.cgpa=cgpa;
     }
-    public Stuentity(Long id,String name,String email,float cgpa){
+    public Stuentity(Long id, String name,String email, float cgpa){
         this.id=id;
         this.name=name;
         this.email=email;
         this.cgpa=cgpa;
+
     }
     public Stuentity(){
         
     }
 }
-
